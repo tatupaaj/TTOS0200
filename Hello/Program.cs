@@ -1,6 +1,8 @@
 ﻿
 using System;
 
+// jotain 11.1.2007
+
 namespace Hello
 {
     class Henkilo
