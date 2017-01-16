@@ -28,7 +28,7 @@ namespace Hello
            
             for (int i = 0; i < nimet.Length; i++)
             {
-                Console.WriteLine("Annan nimi: ");
+                Console.WriteLine("Annan nimi kdsnfkd: ");
                 nimet[i] = Console.ReadLine();
             }
             // näytetään nimet
