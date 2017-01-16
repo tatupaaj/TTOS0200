@@ -30,7 +30,7 @@ namespace Tehtävät_1
             //16. Arvaaja();
             //17. Kolmastaulukko();
             //18. Palindromi();
-            //19. Hirsipuu();
+            Hirsipuu();
 
 
         }
