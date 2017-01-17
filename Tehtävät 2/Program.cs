@@ -11,7 +11,8 @@ namespace Tehtävät_2
     {
         static void Main(string[] arg)
         {
-           //tehtävä1 TestaaKiuas();
+            //tehtävä1 TestaaKiuas();
+            VehiclenToiminta();
         }
 
         // tehtävä 1 kiuas luokan testaus
@@ -31,6 +32,25 @@ namespace Tehtävät_2
             kiuas.Kosteus = 101;
             Console.WriteLine("kiukaan kosteus {0}", kiuas.Kosteus);
         }
+
+        //tehtävä 4
+        static void VehiclenToiminta()
+        {
+            Vehicle vehicle0 = new Vehicle("Volvo", 100, 4);
+            Vehicle vehicle1 = new Vehicle("Wolswagen", 120, 4);
+            Vehicle vehicle2 = new Vehicle("Ford", 150, 4);
+            Vehicle vehicle3 = new Vehicle("Mersu", 200, 4);
+
+            vehicle0.PrintData();
+            vehicle1.PrintData();
+            vehicle2.PrintData();
+            vehicle3.PrintData();
+
+            vehicle0.ToString();
+            vehicle1.ToString();
+            vehicle2.ToString();
+            vehicle3.ToString();
+        }  
 
      }
 }
