@@ -18,7 +18,8 @@ namespace JAMK.IT
         public void Nayta()
         {
             Console.WriteLine("OPISKELIJA!");
-            Console.WriteLine("Nimi: {0}, opiskelijanumero: {1}", Nimi, Opiskelijanumero);
+            Console.WriteLine("Nimi: {0}", Nimi);
+            Console.WriteLine("Opiskelijanumero: {0}", Opiskelijanumero);
             Console.WriteLine("Osoite: {0}", Osoite);
         }
     }
