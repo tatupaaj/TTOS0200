@@ -18,7 +18,7 @@ namespace Tehtävät_2_5
         static void TestaaOpiskelija()
         {
         const int quantity = 5;
-            Opiskelija[] opiskelija = new Opiskelija[quantity];
+        Opiskelija[] opiskelija = new Opiskelija[quantity];
 
             for (int i = 0; i < 5; i++)
             {
