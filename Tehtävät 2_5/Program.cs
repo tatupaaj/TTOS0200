@@ -8,11 +8,17 @@ using JAMK.IT;
 namespace Tehtävät_2_5
 {
    
-    class Opiskelija
+    class Program
     {
         static void Main(string[] args)
         {
-        Opiskelija[] opiskelija = new Opiskelija[5];
+            TestaaOpiskelija();
+        }
+
+        static void TestaaOpiskelija()
+        {
+        const int quantity = 5;
+            Opiskelija[] opiskelija = new Opiskelija[quantity];
 
             for (int i = 0; i < 5; i++)
             {
@@ -41,19 +47,9 @@ namespace Tehtävät_2_5
 
             Console.Clear();
             for (int i = 0; i < 5; i++)
-            { opiskelija[i].Tulosta(); }
-
-            Console.WriteLine("Minkä opiskelijan tietoja muutetaan? (0-4)");
-            int muutos = int.Parse(Console.ReadLine());
-
-            opiskelija[muutos].VaihdaNimi();
-            opiskelija[muutos].VaihdaOsoite();
-
-            opiskelija[muutos].Tulosta();
-
-            Console.WriteLine("Tiedot päivitetty!");
-            opiskelija[muutos].Tulosta();
+            { opiskelija[i].Nayta(); }
         }
-    }
+
+        }
 }
 
