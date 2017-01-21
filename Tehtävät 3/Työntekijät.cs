@@ -16,9 +16,10 @@ namespace Tehtävät_3
         {
         }
 
-        public Työntekijät(string name)
+        public Työntekijät(string name, string profession)
         {
             Name = name;
+            Profession = profession;
         }
 
         public override string ToString()

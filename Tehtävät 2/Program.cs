@@ -11,8 +11,8 @@ namespace Tehtävät_2
     {
         static void Main(string[] arg)
         {
-            //tehtävä1 TestaaKiuas();
-            VehiclenToiminta();
+            TestaaKiuas();
+            //VehiclenToiminta();
         }
 
         // tehtävä 1 kiuas luokan testaus

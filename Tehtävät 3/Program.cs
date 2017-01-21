@@ -62,7 +62,20 @@ namespace Tehtävät_3
 
         static void Tietoja()
         {
+            Työntekijät person = new Työntekijät();
 
+            person.Name = "Aaron Ramsey";
+            person.Profession = "Football player";
+            person.Salary = 90000;
+            Console.WriteLine(person.ToString());
+
+            Boss boss = new Boss();
+            boss.Name = "Teppo Voihan";
+            boss.Profession = "Football Manager";
+            boss.Salary = 50000;
+            boss.Pomo = "Mersu";
+            boss.Boonus = 30000;
+            Console.WriteLine(boss.ToString());
         }
 }
 }
