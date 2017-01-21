@@ -24,7 +24,6 @@ namespace JAMK.IT
 
         public void LuettavatMethod()
         {
-            Console.WriteLine("Tama metodi kuuluu Luettavalle");
         }
 
         public override string ToString()

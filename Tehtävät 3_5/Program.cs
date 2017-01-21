@@ -11,7 +11,8 @@ namespace Tehtävät_3_5
     {
         static void Main(string[] args)
         {
-            TestaaRadio();
+            //TestaaRadio();
+            Tavaroita();
         }
 
         //tehtävä 5
@@ -61,6 +62,31 @@ namespace Tehtävät_3_5
                 }
 
            }
+        }
+
+        //tehtävä 6
+        static void Tavaroita()
+        {
+            Levyt levyt1 = new Levyt();
+            levyt1.Esine = "CD";
+            levyt1.Nimi = "Amon Amath - Jomsviking";
+            levyt1.Hinta = 25;
+            levyt1.Tekija = "Sony music";
+            levyt1.Pituus = 45;
+            Console.WriteLine(levyt1.ToString());
+
+            Levyt levyt2 = new Levyt();
+            levyt2.Esine = "DVD";
+            levyt2.Nimi = "The Hobbit";
+            levyt2.Hinta = 15;
+            levyt2.Tekija = "Warner Bros.";
+            levyt2.Pituus = 169;
+            Console.WriteLine(levyt2.ToString());
+
+            levyt1.LevyMethod();
+            levyt1.TavaratMethod();
+            levyt2.LevyMethod();
+            levyt2.TavaratMethod();
         }
     }
 }

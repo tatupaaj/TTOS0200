@@ -27,7 +27,6 @@ namespace JAMK.IT
 
         public void TavaratMethod()
         {
-            Console.WriteLine("Tama metodi kuuluu Tavaralle");
         }
 
         public override string ToString()
@@ -36,3 +35,4 @@ namespace JAMK.IT
         }
     }
 }
+

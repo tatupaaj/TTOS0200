@@ -24,7 +24,6 @@ namespace JAMK.IT
 
         public void LevyMethod()
         {
-            Console.WriteLine("Tama metodi kuuluu CD:lle");
         }
 
         public override string ToString()

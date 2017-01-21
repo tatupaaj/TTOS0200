@@ -26,7 +26,6 @@ namespace JAMK.IT
 
         public void VempaimetMethod()
         {
-            Console.WriteLine("Tama metodi kuuluu Vempaimelle");
         }
 
         public override string ToString()
