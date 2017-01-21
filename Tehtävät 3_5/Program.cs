@@ -83,10 +83,24 @@ namespace Tehtävät_3_5
             levyt2.Pituus = 169;
             Console.WriteLine(levyt2.ToString());
 
+            Luettavat kirja1 = new Luettavat();
+            kirja1.Esine = "Kirja";
+            kirja1.Nimi = "Aasi kanssa matkalla";
+            kirja1.Hinta = 7;
+            kirja1.Tekija = "Robert Louis Stevenson";
+            kirja1.IlmestymisVuosi = 1879;
+            kirja1.SivuMaara = 153;
+            kirja1.Genre = "kaunokirjallisuus";
+            Console.WriteLine(kirja1.ToString());
+
             levyt1.LevyMethod();
             levyt1.TavaratMethod();
+
             levyt2.LevyMethod();
             levyt2.TavaratMethod();
+
+            kirja1.TavaratMethod();
+            kirja1.LuettavatMethod();
         }
     }
 }
