@@ -9,40 +9,21 @@ namespace JAMK.IT
 {
     class Jaakaappi
     {
-        public string Nimi { get; set; }
-        public string Valmistaja { get; set; }
-        private const int maxTarvikkeet = 4;
-        private int lkmTarvikkeet = 0;
+        public List<Elintarvike> elinTarvike = new List<Elintarvike>();
 
-        public List<Elintarvike> Elintarvikkeet { get; }
-
-        public Jaakaappi()
+        public List<Elintarvike> ElinTarvike
         {
-            Elintarvikkeet = new List<Elintarvike>();
+            get { return elinTarvike; }
         }
 
-        public void LisääElintarvike(Elintarvike elintarvike)
+        public void LisaaElinTarvike (Elintarvike tavara)
         {
-            if (lkmTarvikkeet < maxTarvikkeet)
-            {
-                Elintarvikkeet.Add(elintarvike);
-                lkmTarvikkeet++;
-                Console.WriteLine("Elintarvikeet {0} ja {1} lisätty {2}", elintarvike.Ruoka, elintarvike.Juoma, Nimi);
-            }
-            else
-            {
-                Console.WriteLine("Jaakaappi on valitettavasti taynna!");
-            }
+            elinTarvike.Add(tavara);
         }
 
-        public override string ToString()
+        public void PoistaElinTarvike (Elintarvike tavara)
         {
-            string s = "Jaakaaapi on: " + Nimi + " Valmistaja: " + Valmistaja + "\nElintarvikkeet:";
-            foreach (Elintarvike r in Elintarvikkeet)
-            {
-                if (r != null) s += "\n-" + r.ToString();
-            }
-            return s;
+            elinTarvike.Remove(tavara);
         }
     }
 }

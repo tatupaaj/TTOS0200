@@ -11,15 +11,30 @@ namespace Tehtävät_5_2
     {
         static void Main(string[] args)
         {
-            Elintarvike elintarvike1 = new Elintarvike { Ruoka = "Paisti", Juoma = "Maito" };
-           
-            Jaakaappi jaakaappi = new Jaakaappi { Nimi = "Kallenjaakaappi", Valmistaja = "Samsung" };
-            Console.WriteLine("Nyt on {0} hommattu {1}", jaakaappi.Nimi, jaakaappi.Valmistaja);
-            jaakaappi.LisääElintarvike(elintarvike1);
-            jaakaappi.LisääElintarvike(elintarvike1);
-            jaakaappi.LisääElintarvike(elintarvike1);
-            jaakaappi.LisääElintarvike(elintarvike1);
-            Console.WriteLine(jaakaappi.ToString());
+            Jaakaappi jaakaappi = new Jaakaappi();
+
+            Elintarvike elintarvike1 = new Elintarvike { Ruoka = "Paisti", Juoma = "Maito"};
+            Elintarvike elintarvike2 = new Elintarvike { Ruoka = "Hernerokka", Juoma = "Maito" };
+
+            jaakaappi.LisaaElinTarvike(elintarvike1);
+            jaakaappi.LisaaElinTarvike(elintarvike2);
+
+
+            Console.WriteLine("Jaakaapissa");
+            foreach (Elintarvike t in jaakaappi.ElinTarvike)
+            {
+                Console.WriteLine(t.Ruoka, t.Juoma);
+                Console.WriteLine(t.Ruoka, t.Juoma);
+            }
+
+            Console.WriteLine("Paisti on homeessa");
+            jaakaappi.PoistaElinTarvike(elintarvike2);
+
+            Console.WriteLine("\nJaakaapissa");
+            foreach (Elintarvike t in jaakaappi.ElinTarvike)
+            {
+                Console.WriteLine(t.Ruoka, t.Juoma);
+            }
         }
     }
 }
