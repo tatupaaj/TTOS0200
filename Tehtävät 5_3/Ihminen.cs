@@ -13,6 +13,9 @@ namespace JAMK.IT
         public float Pituus { get; set; }
         public string Nimi { get; set; }
 
+        public Ihminen()
+        {
+        }
         public override string Liiku()
         {
             Console.WriteLine("Liikun");
