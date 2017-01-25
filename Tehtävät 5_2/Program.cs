@@ -13,8 +13,8 @@ namespace Tehtävät_5_2
         {
             Jaakaappi jaakaappi = new Jaakaappi();
 
-            Elintarvike elintarvike1 = new Elintarvike { Ruoka = "Paisti", Juoma = "Maito"};
-            Elintarvike elintarvike2 = new Elintarvike { Ruoka = "Hernerokka", Juoma = "Maito" };
+            Elintarvike elintarvike1 = new Elintarvike { Ruoka = "Paisti"};
+            Elintarvike elintarvike2 = new Elintarvike { Ruoka = "Hernerokka"};
 
             jaakaappi.LisaaElinTarvike(elintarvike1);
             jaakaappi.LisaaElinTarvike(elintarvike2);
@@ -23,8 +23,8 @@ namespace Tehtävät_5_2
             Console.WriteLine("Jaakaapissa");
             foreach (Elintarvike t in jaakaappi.ElinTarvike)
             {
-                Console.WriteLine(t.Ruoka, t.Juoma);
-                Console.WriteLine(t.Ruoka, t.Juoma);
+                Console.WriteLine(t.Ruoka);
+                Console.WriteLine(t.Ruoka);
             }
 
             Console.WriteLine("Paisti on homeessa");
@@ -33,7 +33,7 @@ namespace Tehtävät_5_2
             Console.WriteLine("\nJaakaapissa");
             foreach (Elintarvike t in jaakaappi.ElinTarvike)
             {
-                Console.WriteLine(t.Ruoka, t.Juoma);
+                Console.WriteLine(t.Ruoka);
             }
         }
     }

@@ -15,7 +15,7 @@ namespace JAMK.IT
 
         public override string Liiku()
         {
-            return "Liikun";
+            Console.WriteLine("Liikun");
         }
 
         public void Kasva()

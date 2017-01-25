@@ -11,8 +11,19 @@ namespace JAMK.IT
     {
         public int Ika { get; set; }
         public string Liiku { get; set; }
+
         public Nisakas()
         {
+        }
+
+        public Nisakas(string liiku)
+        {
+            Liiku = liiku;
+        }
+
+        public void Liike()
+        {
+            Console.WriteLine("Liike");
         }
 
         public abstract void Jotain(); 

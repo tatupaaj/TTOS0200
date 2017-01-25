@@ -10,11 +10,10 @@ namespace JAMK.IT
     class Elintarvike
     {
         public string Ruoka { get; set; }
-        public string Juoma { get; set; }
 
         public override string ToString()
         {
-            return "Ruoka: " + Ruoka + " Juoma: " + Juoma;
+            return "Ruoka: " + Ruoka;
         }
     }
 }
