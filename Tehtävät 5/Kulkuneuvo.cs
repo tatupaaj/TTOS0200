@@ -27,7 +27,7 @@ namespace JAMK.IT
         {
             if (lkmRenkaat < MaxRenkaat)
             {
-                Renkaat.Add(rangas);
+                Renkaat.Add(rengas);
                 lkmRenkaat++;
                 Console.WriteLine("Rengas {0} lisätty ajoneuvoon {1}", rengas.Malli, Nimi);
             }

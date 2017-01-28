@@ -13,7 +13,8 @@ namespace Tehtävät_6
         {
             //TestaaHenkiloRekisteri();
             //TestaaCD();
-            TestaaKorttipeli();
+            //TestaaKortit();
+            TestaaArsenal();
         }
 
         static void TestaaHenkiloRekisteri()
@@ -39,7 +40,7 @@ namespace Tehtävät_6
             Console.Write("Anna Hetu: ");
             string tmp = Console.ReadLine();
             Console.WriteLine("{0}", poppoo.HaeHenkiloHetulla(tmp));
-            
+
 
         }
 
@@ -89,9 +90,86 @@ namespace Tehtävät_6
         }
 
         //tehtävä 3
-        static void TestaaKorttipeli()
-        {
 
+        static void TestaaKortit()
+        {
+            KorttiPakka kortteja = new KorttiPakka();
+
+            foreach (var item in kortteja.Kortit)
+            {
+                Console.WriteLine(item.ToString());
+            }
+        }
+
+
+        // tehtävä 4
+
+        static void TestaaArsenal()
+        {
+            Dictionary<int, Pelaaja> pelaajat = new Dictionary<int, Pelaaja>();
+
+            Joukkue arsenal = new Joukkue {Nimi = "Arsenal", KotiKaupunki = "Lontoo" };
+            Pelaaja gunner = new Pelaaja { Etunimi = "Petr", Sukunimi = "Cech", Ika = 31, Numero = 34 };
+            Pelaaja gunner1 = new Pelaaja { Etunimi = "David", Sukunimi = "Ospina", Ika = 29, Numero = 13 };
+            Pelaaja gunner2 = new Pelaaja { Etunimi = "Kieran", Sukunimi = "Gibbs", Ika = 27, Numero = 3 };
+            Pelaaja gunner3 = new Pelaaja { Etunimi = "Nacho", Sukunimi = "Monreal", Ika = 30, Numero = 18 };
+            Pelaaja gunner4 = new Pelaaja { Etunimi = "Per", Sukunimi = "Mertesacker", Ika = 32, Numero = 4 };
+            Pelaaja gunner5 = new Pelaaja { Etunimi = "Shakodran", Sukunimi = "Mustafi", Ika = 23, Numero = 20 };
+            Pelaaja gunner6 = new Pelaaja { Etunimi = "Gabriel", Sukunimi = "Paulista", Ika = 26, Numero = 6 };
+            Pelaaja gunner7 = new Pelaaja { Etunimi = "Hector", Sukunimi = "Bellerin", Ika = 21, Numero = 24 };
+            Pelaaja gunner8 = new Pelaaja { Etunimi = "Laurent", Sukunimi = "Koscielny", Ika = 31, Numero = 6 };
+            Pelaaja gunner9 = new Pelaaja { Etunimi = "Aaron", Sukunimi = "Ramsey", Ika = 26, Numero = 8 };
+            Pelaaja gunner10 = new Pelaaja { Etunimi = "Granit", Sukunimi = "Xhaka", Ika = 24, Numero = 29 };
+            Pelaaja gunner11 = new Pelaaja { Etunimi = "Mesut", Sukunimi = "Özil", Ika = 28, Numero = 11 };
+            Pelaaja gunner12 = new Pelaaja { Etunimi = "Alex", Sukunimi = "Oxlade-Chamberlain", Ika = 23, Numero = 16 };
+            Pelaaja gunner13 = new Pelaaja { Etunimi = "Francis", Sukunimi = "Coquelin", Ika = 25, Numero = 34 };
+            Pelaaja gunner14 = new Pelaaja { Etunimi = "Santi", Sukunimi = "Cazorla", Ika = 32, Numero = 19 };
+            Pelaaja gunner15 = new Pelaaja { Etunimi = "Mohamed", Sukunimi = "Elneny", Ika = 24, Numero = 35 };
+            Pelaaja gunner16 = new Pelaaja { Etunimi = "Alexis", Sukunimi = "sanchez", Ika = 28, Numero = 7 };
+            Pelaaja gunner17 = new Pelaaja { Etunimi = "Alex", Sukunimi = "Iwobi", Ika = 20, Numero = 17 };
+            Pelaaja gunner18 = new Pelaaja { Etunimi = "Lucas", Sukunimi = "Perez", Ika = 28, Numero = 9 };
+            Pelaaja gunner19 = new Pelaaja { Etunimi = "Olivier", Sukunimi = "Giroud", Ika = 30, Numero = 12 };
+            Pelaaja gunner20 = new Pelaaja { Etunimi = "Danny", Sukunimi = "Welbeck", Ika = 26, Numero = 23 };
+            Pelaaja gunner21 = new Pelaaja { Etunimi = "Theo", Sukunimi = "Walcott", Ika = 27, Numero = 14 };
+            Pelaaja gunner22 = new Pelaaja { Etunimi = "Jack", Sukunimi = "Wilshere", Ika = 25, Numero = 10 };
+
+
+            pelaajat.Add(gunner.Numero, gunner);
+            pelaajat.Add(gunner1.Numero, gunner1);
+
+
+
+            arsenal.LisaaPelaaja(gunner);
+            arsenal.LisaaPelaaja(gunner1);
+            arsenal.LisaaPelaaja(gunner2);
+            arsenal.LisaaPelaaja(gunner3);
+            arsenal.LisaaPelaaja(gunner4);
+            arsenal.LisaaPelaaja(gunner5);
+            arsenal.LisaaPelaaja(gunner6);
+            arsenal.LisaaPelaaja(gunner7);
+            arsenal.LisaaPelaaja(gunner8);
+            arsenal.LisaaPelaaja(gunner9);
+            arsenal.LisaaPelaaja(gunner10);
+            arsenal.LisaaPelaaja(gunner11);
+            arsenal.LisaaPelaaja(gunner12);
+            arsenal.LisaaPelaaja(gunner13);
+            arsenal.LisaaPelaaja(gunner14);
+            arsenal.LisaaPelaaja(gunner15);
+            arsenal.LisaaPelaaja(gunner16);
+            arsenal.LisaaPelaaja(gunner17);
+            arsenal.LisaaPelaaja(gunner18);
+            arsenal.LisaaPelaaja(gunner19);
+            arsenal.LisaaPelaaja(gunner20);
+            arsenal.LisaaPelaaja(gunner21);
+            arsenal.LisaaPelaaja(gunner22);
+
+            foreach (var item in arsenal.PelaajaLista)
+            {
+                Console.WriteLine("{0}", item.ToString());
+            }
+
+            int tmp = Console.Read();
+            Console.Write("Pelaaja numerolla: {0} on pelaaja: {1}", tmp, pelaajat[tmp].Numero);
         }
     }
 }
