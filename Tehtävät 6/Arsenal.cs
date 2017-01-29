@@ -41,6 +41,11 @@ namespace JAMK.IT
         public string Nimi { get; set; }
         public string KotiKaupunki { get; set; }
         public int Pelaajat { get; set; }
+
+        public override string ToString()
+        {
+            return Nimi + " " + KotiKaupunki;
+        }
     }
 
 

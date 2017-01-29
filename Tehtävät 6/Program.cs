@@ -107,8 +107,17 @@ namespace Tehtävät_6
         static void TestaaArsenal()
         {
 
-            Joukkue joukkue = new Joukkue {Nimi = "Arsenal", KotiKaupunki = "Lontoo" };
+            Joukkue joukkue = new Joukkue {Nimi = "Arsenal\n", KotiKaupunki = "Lontoo\n" };
 
+            foreach (var item in joukkue.Nimi)
+            {
+                Console.Write(item.ToString());
+            }
+
+            foreach (var item in joukkue.KotiKaupunki)
+            {
+                Console.Write(item.ToString());
+            }
 
             List<Pelaaja> pelaajat = new List<Pelaaja>();
 
