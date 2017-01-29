@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JAMK.IT
 {
-    class Pelaaja
+   public class Pelaaja : IEquatable<Pelaaja>
     {
         public string Etunimi { get; set; }
         public string Sukunimi { get; set; }
@@ -17,48 +17,31 @@ namespace JAMK.IT
         {
             return Etunimi + " " + Sukunimi + " " + Ika + " " + Numero;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            Pelaaja objAsPart = obj as Pelaaja;
+            if (objAsPart == null) return false;
+            else return Equals(objAsPart);
+        }
+        public override int GetHashCode()
+        {
+            return Numero;
+        }
+        public bool Equals(Pelaaja other)
+        {
+            if (other == null) return false;
+            return (this.Numero.Equals(other.Numero));
+        }
     }
 
     class Joukkue
     {
         public string Nimi { get; set; }
         public string KotiKaupunki { get; set; }
-        private List<Pelaaja> joukkue;
-        public List<Pelaaja> PelaajaLista
-        { get { return joukkue; } }
-
-        public Joukkue()
-        {
-            joukkue = new List<Pelaaja>();
-        }
-
-        public void LisaaPelaaja(Pelaaja gunner)
-        {
-            joukkue.Add(gunner);
-        }
-
-        public Pelaaja HaePelaaja(int index)
-        {
-            if (index < joukkue.Count)
-            {
-                return joukkue.ElementAt(index);
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public Pelaaja HaeHenkiloHetulla(int numero)
-        {
-            foreach (Pelaaja gunner in joukkue)
-            {
-                if (gunner.Numero == numero)
-                {
-                    return gunner;
-                }
-            }
-            return null;
-        }
+        public int Pelaajat { get; set; }
     }
+
+
 }
