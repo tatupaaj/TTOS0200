@@ -21,9 +21,9 @@ namespace JAMK.IT
         public override bool Equals(object obj)
         {
             if (obj == null) return false;
-            Pelaaja objAsPart = obj as Pelaaja;
-            if (objAsPart == null) return false;
-            else return Equals(objAsPart);
+            Pelaaja objAsPelaaja = obj as Pelaaja;
+            if (objAsPelaaja == null) return false;
+            else return Equals(objAsPelaaja);
         }
         public override int GetHashCode()
         {
@@ -40,13 +40,11 @@ namespace JAMK.IT
     {
         public string Nimi { get; set; }
         public string KotiKaupunki { get; set; }
-        public int Pelaajat { get; set; }
 
         public override string ToString()
         {
             return Nimi + " " + KotiKaupunki;
         }
+
     }
-
-
 }

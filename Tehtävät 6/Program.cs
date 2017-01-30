@@ -171,6 +171,10 @@ namespace Tehtävät_6
             {
                 Console.WriteLine(gunner);
             }
+
+            // etsii onko tietty pelaaja olemassa
+            Console.WriteLine("\nOnko pelaajaa numerolla: 7 : {0}",
+            pelaajat.Exists(x => x.Numero == 7));
         }
     }
 }
