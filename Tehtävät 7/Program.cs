@@ -12,26 +12,36 @@ namespace Tehtävät_7
         static void Main(string[] args)
         {
             //Merkkijonot();
-            LukeeNimiä();
+            //LukeeNimiä();
+            //Eriluvut();
+            Ohjelmat();
         }
 
         //tehtävä 1
         static void Merkkijonot()
         {
-            System.IO.StreamWriter outputFile = new System.IO.StreamWriter(@"D:\K8838\test.txt");
-            while (true)
+            try
             {
-                Console.WriteLine("Anna nimi, x kaitkaisee.");
-                string retval = Console.ReadLine();
-
-                if (retval == "x")
-                    break;
-                else
+                List<string> nimet = new List<string>();
+                System.IO.StreamWriter outputFile = new System.IO.StreamWriter(@"C:\tiedosto\koulu\k8838 ohjelmointi\C#\test.txt");
+                while (true)
                 {
-                    outputFile.WriteLine(retval);
+                    Console.WriteLine("Anna nimi, x lopettaa.");
+                    string retval = Console.ReadLine();
+
+                    if (retval == "x")
+                        break;
+                    else
+                    {
+                        outputFile.WriteLine(retval);
+                    }
                 }
+                outputFile.Close();
             }
-            outputFile.Close();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
 
@@ -43,20 +53,64 @@ namespace Tehtävät_7
             //string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             try
             {
-                string[] texts = System.IO.File.ReadAllText(@"d:\K8838\temp.txt");
-                string[] nimi = new string[texts.lenght];
-                int n = 0;
-                foreach (string text in texts) 
+                Console.WriteLine(System.IO.File.Exists(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt") ? "File exists." : "File does not exist.");
+                if (System.IO.File.Exists(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt"))
                 {
-                    nimi[n] = text;
-                    n++;
+                    string[] lines = System.IO.File.ReadAllLines(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt");
+                    Console.WriteLine("Yhteensä {0} riviä ja {1} nimeä", lines.Length, lines.Distinct().Count());
+                    Array.Sort(lines);
+                    foreach (string line in lines)
+                    {
+                        Console.WriteLine(line);
+                    }
                 }
-                System.Console.WriteLine("Contents of temp.txt:\n" + text);
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                Console.WriteLine("File not found (FileNotFoundException)");
+                Console.WriteLine(ex.Message);
             }
+        }
+
+        //tehtävä 3
+
+        static void Eriluvut()
+        {
+            try {
+            int kokonaisluvut = 0;
+            float reaaliluvut = 0.0F;
+            string path = @"c:\tiedostot\koulu\K8838 ohjelmointi\C#", joku;
+
+            do
+            {
+                Console.WriteLine("Anna int tai float, kaikki muu lopettaa");
+                joku = Console.ReadLine();
+                if (int.TryParse(joku, out kokonaisluvut))
+                {
+                    string intfile = path + @"\kokonaisluvut.txt";
+                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(intfile, true);
+                    outputFile.WriteLine(kokonaisluvut);
+                    outputFile.Close();
+                }
+                else if (float.TryParse(joku, out reaaliluvut))
+                {
+                    string floafile = path + @"\reaaliluvut.txt";
+                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(floafile, true);
+                    outputFile.WriteLine(reaaliluvut);
+                    outputFile.Close();
+                }
+            }
+            while (float.TryParse(joku, out reaaliluvut) || int.TryParse(joku, out kokonaisluvut));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        // tehtävä 4
+        static void Ohjelmat()
+        {
+
         }
     }
 }
