@@ -107,7 +107,9 @@ namespace Tehtävät_7
                 }
             }
             while (float.TryParse(joku, out reaaliluvut) || int.TryParse(joku, out kokonaisluvut));
+               
             }
+           
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
