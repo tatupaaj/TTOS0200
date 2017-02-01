@@ -37,6 +37,12 @@ namespace Tehtävät_7
                     }
                 }
                 outputFile.Close();
+
+                string[] lines = System.IO.File.ReadAllLines(@"D:\K8838\test.txt");
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                }
             }
             catch (Exception ex)
             {
