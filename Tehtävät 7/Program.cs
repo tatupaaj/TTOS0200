@@ -76,6 +76,8 @@ namespace Tehtävät_7
             }
         }
 
+
+
         //tehtävä 3
 
         static void Eriluvut()
@@ -91,15 +93,15 @@ namespace Tehtävät_7
                 joku = Console.ReadLine();
                 if (int.TryParse(joku, out kokonaisluvut))
                 {
-                    string intfile = path + @"\kokonaisluvut.txt";
-                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(intfile, true);
+                    string kokofile = path + @"\kokonaisluvut.txt";
+                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(kokofile, true);
                     outputFile.WriteLine(kokonaisluvut);
                     outputFile.Close();
                 }
                 else if (float.TryParse(joku, out reaaliluvut))
                 {
-                    string floafile = path + @"\reaaliluvut.txt";
-                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(floafile, true);
+                    string reaalifile = path + @"\reaaliluvut.txt";
+                    System.IO.StreamWriter outputFile = new System.IO.StreamWriter(reaalifile, true);
                     outputFile.WriteLine(reaaliluvut);
                     outputFile.Close();
                 }
