@@ -13,8 +13,8 @@ namespace Tehtävät_7
         {
             //Merkkijonot();
             //LukeeNimiä();
-            //Eriluvut();
-            Ohjelmat();
+            Eriluvut();
+            //Ohjelmat();
         }
 
         //tehtävä 1
@@ -23,7 +23,7 @@ namespace Tehtävät_7
             try
             {
                 List<string> nimet = new List<string>();
-                System.IO.StreamWriter outputFile = new System.IO.StreamWriter(@"C:\tiedosto\koulu\k8838 ohjelmointi\C#\test.txt");
+                System.IO.StreamWriter outputFile = new System.IO.StreamWriter(@"D:\K8838\test.txt");
                 while (true)
                 {
                     Console.WriteLine("Anna nimi, x lopettaa.");
@@ -53,10 +53,10 @@ namespace Tehtävät_7
             //string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             try
             {
-                Console.WriteLine(System.IO.File.Exists(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt") ? "File exists." : "File does not exist.");
-                if (System.IO.File.Exists(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt"))
+                Console.WriteLine(System.IO.File.Exists(@"D:\K8838\temp.txt") ? "File exists." : "File does not exist.");
+                if (System.IO.File.Exists(@"D:\K8838\temp.txt"))
                 {
-                    string[] lines = System.IO.File.ReadAllLines(@"c:\tiedostot\koulu\K8838 ohjelmointi\C#\temp.txt");
+                    string[] lines = System.IO.File.ReadAllLines(@"D:\K8838\temp.txt");
                     Console.WriteLine("Yhteensä {0} riviä ja {1} nimeä", lines.Length, lines.Distinct().Count());
                     Array.Sort(lines);
                     foreach (string line in lines)
@@ -78,11 +78,11 @@ namespace Tehtävät_7
             try {
             int kokonaisluvut = 0;
             float reaaliluvut = 0.0F;
-            string path = @"c:\tiedostot\koulu\K8838 ohjelmointi\C#", joku;
+            string path = @"D:\K8838", joku;
 
             do
             {
-                Console.WriteLine("Anna int tai float, kaikki muu lopettaa");
+                Console.WriteLine("Anna kokonaisluku tai reaaliluku, kaikki muu lopettaa");
                 joku = Console.ReadLine();
                 if (int.TryParse(joku, out kokonaisluvut))
                 {
@@ -106,6 +106,9 @@ namespace Tehtävät_7
                 Console.WriteLine(ex.Message);
             }
         }
+
+
+
 
         // tehtävä 4
         static void Ohjelmat()
