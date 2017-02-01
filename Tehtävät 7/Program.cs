@@ -11,9 +11,9 @@ namespace Tehtävät_7
     {
         static void Main(string[] args)
         {
-            //Merkkijonot();
+            Merkkijonot();
             //LukeeNimiä();
-            Eriluvut();
+            //Eriluvut();
             //Ohjelmat();
         }
 
@@ -50,7 +50,6 @@ namespace Tehtävät_7
         // tehtävä 2
         static void LukeeNimiä()
         {
-            //string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             try
             {
                 Console.WriteLine(System.IO.File.Exists(@"D:\K8838\temp.txt") ? "File exists." : "File does not exist.");
