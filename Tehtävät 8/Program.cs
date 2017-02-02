@@ -12,7 +12,8 @@ namespace Tehtävät_8
     {
         static void Main(string[] args)
         {
-            Noppa();
+            //Noppa();
+            Ostoskarry();
         }
 
         //tehtävä 1
@@ -65,5 +66,24 @@ namespace Tehtävät_8
                 Console.WriteLine("- Numeroa {0} on heitetty: {1}", kvp.Key, kvp.Value);
         }
 
+
+
+        // tehtävä 2
+        static void Ostoskarry()
+        {
+            Products products = new Products();
+
+            Product tuote = new Product { Nimi = "Pahkinoita ", Hinta = "2,50 e" };
+            Product tuote1 = new Product { Nimi = "Juusto ", Hinta = "4,00 e\n" };
+
+            products.NewProduct(tuote);
+            products.NewProduct(tuote1);
+
+            Console.WriteLine("All products in collection: ");
+            foreach (Product product in products.ProductList)
+            {
+                Console.WriteLine("{0}", product.ToString());
+            }
+        }
     }
 }
