@@ -132,6 +132,22 @@ namespace Tehtävät_8
         {
             try
             {
+                Circle circle1 = new Circle { Radius = 3.245 };
+                Circle circle2 = new Circle { Radius = 7.745 };
+                Circle circle3 = new Circle { Radius = 5.245 };
+                Rectangle rectangle1 = new Rectangle { Leveys = 2.34, Pituus = 4.623 };
+                Rectangle rectangle2 = new Rectangle { Leveys = 10.34, Pituus = 2.34 };
+                Rectangle rectangle3 = new Rectangle { Leveys = 5.23, Pituus = 7.23 };
+                Shapes shapes = new Shapes();
+                shapes.AddShape(circle1);
+                shapes.AddShape(circle2);
+                shapes.AddShape(circle3);
+                shapes.AddShape(rectangle1);
+                shapes.AddShape(rectangle2);
+                shapes.AddShape(rectangle3);
+
+
+                Console.WriteLine(shapes.ToString());
 
             }
             catch (Exception ex)
