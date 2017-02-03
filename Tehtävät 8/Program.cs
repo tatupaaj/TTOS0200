@@ -12,13 +12,24 @@ namespace Tehtävät_8
     {
         static void Main(string[] args)
         {
-            //Noppa();
-            Ostoskarry();
+            try
+            { 
+                //Noppa();
+                //Ostoskarry();
+                //Kalastaminen();
+                TestaaShape();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         //tehtävä 1
         static void Noppa()
         {
+            try
+            { 
             var sw = new Stopwatch();
             List<float> Numerolista = new List<float>();
             Noppa noppa = new Noppa();
@@ -64,6 +75,11 @@ namespace Tehtävät_8
                     EritteleNumerot[i] = 1;
             foreach (KeyValuePair<int, int> kvp in EritteleNumerot)
                 Console.WriteLine("- Numeroa {0} on heitetty: {1}", kvp.Key, kvp.Value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
 
@@ -71,6 +87,8 @@ namespace Tehtävät_8
         // tehtävä 2
         static void Ostoskarry()
         {
+            try
+            {
             Products products = new Products();
 
             Product tuote = new Product { Nimi = "Pahkinoita ", Hinta = "2,50 e" };
@@ -83,6 +101,42 @@ namespace Tehtävät_8
             foreach (Product product in products.ProductList)
             {
                 Console.WriteLine("{0}", product.ToString());
+            }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        // tehtävä 3
+        static void Kalastaminen()
+        {
+            try
+            {
+            Kala kala = new Kala("Hauki", 60, 2.0);
+            Kalastaja kalastaja = new Kalastaja("Kirsi Kernel", "040 1234567");
+            Kalapaikka kalapaikka = new Kalapaikka("Palokkajarvi", "Jyvaskyla");
+
+            Console.Write(kala.Laji, kala.Pituus, kala.Paino);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
+        // tehtävä 4
+        static void TestaaShape()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
