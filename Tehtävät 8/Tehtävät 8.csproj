@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayCalcs.cs" />
     <Compile Include="Kalastus.cs" />
     <Compile Include="Muodot.cs" />
     <Compile Include="Noppa.cs" />

@@ -13,11 +13,12 @@ namespace Tehtävät_8
         static void Main(string[] args)
         {
             try
-            { 
+            {
                 //Noppa();
                 //Ostoskarry();
                 //Kalastaminen();
-                TestaaShape();
+                //TestaaShape();
+                MinMax();
             }
             catch (Exception ex)
             {
@@ -155,5 +156,25 @@ namespace Tehtävät_8
                 Console.WriteLine(ex.Message);
             }
         }
+
+        // tehtävä 5
+        static void MinMax()
+        {
+            try
+            {
+                double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+                Console.WriteLine("Sum: "+ ArrayCalcs.Sum(array));
+                Console.WriteLine("Ave: "+ ArrayCalcs.Average(array));
+                Console.WriteLine("Min: "+ ArrayCalcs.Min(array));
+                Console.WriteLine("Max: "+ ArrayCalcs.Max(array));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        // tehtävä 6
+
     }
 }
