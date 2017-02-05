@@ -14,11 +14,11 @@ namespace Tehtävät_8
         {
             try
             {
-                //Noppa();
+                //TestaaNoppa();
                 //Ostoskarry();
-                //Kalastaminen();
+                Kalastaminen();
                 //TestaaShape();
-                MinMax();
+                //MinMax();
             }
             catch (Exception ex)
             {
@@ -27,7 +27,7 @@ namespace Tehtävät_8
         }
 
         //tehtävä 1
-        static void Noppa()
+        static void TestaaNoppa()
         {
             try
             { 
@@ -35,18 +35,24 @@ namespace Tehtävät_8
             List<float> Numerolista = new List<float>();
             Noppa noppa = new Noppa();
             Console.Write("Kuinka monta kertaa haluat heittää noppaa?: ");
+
             string Valinta = Console.ReadLine();
             double OnNumero;
             double LaskeNumerot = 0;
             bool OnkoNumero;
+
             while (true)
             {
                 if (OnkoNumero = double.TryParse(Valinta, out OnNumero))
                 {
                     break;
                 }
-                else { Console.WriteLine("Et valinnut numeroa, anna numero : "); }
+                else
+                {
+                    Console.WriteLine("Et valinnut numeroa, anna numero : ");
+                }
             }
+
             sw.Start();
             for (int i = 0; i < OnNumero; i++)
             {
@@ -68,13 +74,18 @@ namespace Tehtävät_8
                 numero = Convert.ToInt32(Math.Ceiling(Numerolista[i]));
                 dictionary.Add(i, numero);
             }
+
             Dictionary<int, int> EritteleNumerot = new Dictionary<int, int>();
             foreach (int i in dictionary.Values)
                 if (EritteleNumerot.ContainsKey(i))
-                    EritteleNumerot[i]++;
-                else
+                    {
+                        EritteleNumerot[i]++;
+                    }
+                    else
+                    { 
                     EritteleNumerot[i] = 1;
-            foreach (KeyValuePair<int, int> kvp in EritteleNumerot)
+                    }
+                foreach (KeyValuePair<int, int> kvp in EritteleNumerot)
                 Console.WriteLine("- Numeroa {0} on heitetty: {1}", kvp.Key, kvp.Value);
             }
             catch (Exception ex)
@@ -82,6 +93,7 @@ namespace Tehtävät_8
                 Console.WriteLine(ex.Message);
             }
         }
+
 
 
 
@@ -110,22 +122,34 @@ namespace Tehtävät_8
             }
         }
 
+
+
+
         // tehtävä 3
         static void Kalastaminen()
         {
             try
             {
-            Kala kala = new Kala("Hauki", 60, 2.0);
-            Kalastaja kalastaja = new Kalastaja("Kirsi Kernel", "040 1234567");
-            Kalapaikka kalapaikka = new Kalapaikka("Palokkajarvi", "Jyvaskyla");
+                Tiedot tiedot = new Tiedot();
+                Kala kala = new Kala("Hauki", 60, 2.0);
+                Kalastaja kalastaja = new Kalastaja("Kirsi Kernel", "040 1234567");
+                Kalapaikka kalapaikka = new Kalapaikka("Palokkajarvi", "Jyvaskyla");
 
-            Console.Write(kala.Laji, kala.Pituus, kala.Paino);
+                /*Kala kala1 = new Kala("Ahven", 40, 1.0);
+                Kalastaja kalastaja1 = new Kalastaja("Kalle Puhuri", "040 1234567");
+                Kalapaikka kalapaikka1 = new Kalapaikka("Jyvasjarvi", "Jyvaskyla");*/
+
+                Console.WriteLine(kala.Laji.ToString() + kala.Pituus.ToString() + kala.Paino.ToString());
+                Console.WriteLine(kalastaja.Nimi.ToString() + kalastaja.PuhNumero.ToString());
+                Console.WriteLine(kalapaikka.Paikannimi.ToString() + kalapaikka.Sijainti.ToString());
+               // Console.Write(kala1.Laji, kala1.Pituus, kala1.Paino);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
+
 
 
         // tehtävä 4
@@ -136,9 +160,11 @@ namespace Tehtävät_8
                 Circle circle1 = new Circle { Radius = 3.245 };
                 Circle circle2 = new Circle { Radius = 7.745 };
                 Circle circle3 = new Circle { Radius = 5.245 };
+
                 Rectangle rectangle1 = new Rectangle { Leveys = 2.34, Pituus = 4.623 };
                 Rectangle rectangle2 = new Rectangle { Leveys = 10.34, Pituus = 2.34 };
                 Rectangle rectangle3 = new Rectangle { Leveys = 5.23, Pituus = 7.23 };
+
                 Shapes shapes = new Shapes();
                 shapes.AddShape(circle1);
                 shapes.AddShape(circle2);

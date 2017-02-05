@@ -21,7 +21,10 @@ namespace JAMK.IT
     class Products
     {
         private List<Product> products;
-        public List<Product> ProductList { get { return products; } }
+        public List<Product> ProductList
+        {
+            get { return products; }
+        }
 
         public Products()
         {

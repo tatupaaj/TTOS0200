@@ -61,4 +61,23 @@ namespace JAMK.IT
             return "-Paikka: " + Paikannimi + "\n" + "-Sijainti: " + Sijainti;
         }
     }
+
+    class Tiedot
+    {
+        private List<Kala> tiedot;
+        public List<Kala> TiedotList
+        {
+            get { return tiedot; }
+        }
+
+        public Tiedot()
+        {
+            tiedot = new List<Kala>();
+        }
+
+        public void NewKala(Kala laji)
+        {
+            tiedot.Add(laji);
+        }
+    }
 }
