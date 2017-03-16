@@ -30,7 +30,7 @@ namespace Tehtävät_1
             //16. Arvaaja();
             //17. Kolmastaulukko();
             //18. Palindromi();
-            Hirsipuu();
+           // Hirsipuu();
 
 
         }
@@ -449,7 +449,7 @@ namespace Tehtävät_1
             taulukko1[3] = 40;
             taulukko1[4] = 50;
             Console.Write("Luvut taulukossa 1 : ");
-            for (int i = 0; i < taulukko1.Length; i++) Console.Write("," + taulukko1[i]);
+            for (int i = 0; i < taulukko1.Length; i++) Console.Write(taulukko1[i] + ",");
 
             taulukko2[0] = 5;
             taulukko2[1] = 15;
@@ -457,8 +457,10 @@ namespace Tehtävät_1
             taulukko2[3] = 35;
             taulukko2[4] = 45;
             Console.Write("\nLuvut taulukossa 2 : ");
-            for (int i = 0; i < taulukko2.Length; i++) Console.Write("," + taulukko2[i]);
-            Console.WriteLine(" ");
+            for (int i = 0; i < taulukko2.Length; i++) Console.Write(taulukko2[i] + ",");
+
+            Console.Write("\nLuvut yhdistetyssä taulukossa :  ");
+            for (int i = 0; i < taulukko3.Length; i++) Console.Write(taulukko2[i] + "," + taulukko1[i] + ",");
         }
 
         //tehtävä 18

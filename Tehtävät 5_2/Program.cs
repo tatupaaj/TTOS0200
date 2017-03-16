@@ -24,11 +24,10 @@ namespace Tehtävät_5_2
             foreach (Elintarvike t in jaakaappi.ElinTarvike)
             {
                 Console.WriteLine(t.Ruoka);
-                Console.WriteLine(t.Ruoka);
             }
 
-            Console.WriteLine("Paisti on homeessa");
-            jaakaappi.PoistaElinTarvike(elintarvike2);
+            Console.WriteLine("\nPaisti on homeessa");
+            jaakaappi.PoistaElinTarvike(elintarvike1);
 
             Console.WriteLine("\nJaakaapissa");
             foreach (Elintarvike t in jaakaappi.ElinTarvike)

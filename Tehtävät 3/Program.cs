@@ -11,9 +11,9 @@ namespace Tehtävät_3
     {
         static void Main(string[] args)
         {
-            //1. Hissi();
+            Hissi();
             //2. Vahvistin();
-            Tietoja();
+            //Tietoja();
         }
 
         //tehtävä 1

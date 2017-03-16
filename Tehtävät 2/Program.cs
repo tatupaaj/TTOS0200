@@ -11,8 +11,10 @@ namespace Tehtävät_2
     {
         static void Main(string[] arg)
         {
-            TestaaKiuas();
+            //TestaaKiuas();
             //VehiclenToiminta();
+            //TestaaPesukone();
+            TestaaTV();
         }
 
         // tehtävä 1 kiuas luokan testaus
@@ -52,5 +54,25 @@ namespace Tehtävät_2
             vehicle3.ToString();
         }  
 
+
+        static void TestaaPesukone()
+        {
+            Pesukone pesukone = new Pesukone();
+            pesukone.OnkoPaalla = true;
+            pesukone.Pesuaste = 40;
+
+            Console.WriteLine("Pesukone on paalla {0}", pesukone.OnkoPaalla);
+            Console.WriteLine("Pesuaste: {0}", pesukone.Pesuaste);
+        }
+
+        static void TestaaTV()
+        {
+            TV tv = new TV();
+            tv.OnkoPaalla = true;
+            tv.Kanava = 7;
+
+            Console.WriteLine("Onko TV päällä {0}", tv.OnkoPaalla);
+            Console.WriteLine("Mikä Kanava: {0}", tv.Kanava);
+        }
      }
 }
